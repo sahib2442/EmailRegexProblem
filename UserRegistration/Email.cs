@@ -29,5 +29,12 @@ namespace UserRegistration
             bool result = regex.IsMatch(email);
             Console.WriteLine("UC3: Enterd Email is" + result);
         }
+        public const string PHONENUMBER_REGEX = "^[0-9a-zA-z]{0,1}[A-Z]{1}[A-Za-z]{2,3}{0,1}$";
+        public void PhoneNumber(string phoneNumber)
+        {
+            Regex regex = new Regex(PHONENUMBER_REGEX);
+            bool result = regex.IsMatch(phoneNumber);
+            Console.WriteLine("UC4: Enterd Phone Number is" + result);
+        }
     }
 }
