@@ -22,5 +22,12 @@ namespace UserRegistration
             bool result = regex.IsMatch(lastName);
             Console.WriteLine("UC2: Enterd Last Name is" + result);
         }
+        public const string EMAIL_REGEX = "^[A-Z]{1}[A-Za-z]{2,3}{0,1}$";
+        public void Email(string email)
+        {
+            Regex regex = new Regex(EMAIL_REGEX);
+            bool result = regex.IsMatch(email);
+            Console.WriteLine("UC3: Enterd Email is" + result);
+        }
     }
 }
